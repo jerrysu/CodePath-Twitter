@@ -25,7 +25,7 @@ PODS:
     - AFNetworking/NSURLSession (~> 2.4.0)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.4)
+  - AFNetworking
   - BDBOAuth1Manager
 
 SPEC CHECKSUMS:
