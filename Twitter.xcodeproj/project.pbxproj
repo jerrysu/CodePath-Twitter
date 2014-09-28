@@ -16,6 +16,7 @@
 		E508FBB919D3B9C000A19386 /* TwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508FBB819D3B9C000A19386 /* TwitterTests.swift */; };
 		E51134D919D7383F003DFCD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51134D819D7383F003DFCD6 /* User.swift */; };
 		E51134DB19D75BF2003DFCD6 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */; };
+		E51134DD19D7A8C6003DFCD6 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51134DC19D7A8C6003DFCD6 /* StatusTableViewCell.swift */; };
 		E54EEAC019D45FDD00412444 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EEABF19D45FDD00412444 /* Status.swift */; };
 		E5E2452F19D5C09D006DA8ED /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2452E19D5C09D006DA8ED /* TwitterClient.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B41D41CD97142CFAFB65193 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		98A49C3A3B27DF15E3710D33 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A7E958F5EAFFCAD517EBB29A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF92C38174C0412CA3459F53 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E508FB9D19D3B9C000A19386 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E508FBA119D3B9C000A19386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 		E508FBB819D3B9C000A19386 /* TwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTests.swift; sourceTree = "<group>"; };
 		E51134D819D7383F003DFCD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		E51134DC19D7A8C6003DFCD6 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
 		E54EEABF19D45FDD00412444 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		E5E2452E19D5C09D006DA8ED /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		E5E2453019D5C382006DA8ED /* Twitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -83,8 +86,8 @@
 				E508FB9F19D3B9C000A19386 /* Twitter */,
 				E508FBB519D3B9C000A19386 /* TwitterTests */,
 				E508FB9E19D3B9C000A19386 /* Products */,
-				3B41D41CD97142CFAFB65193 /* Pods.xcconfig */,
 				9A5E1394A4CA4357A3DD4614 /* Frameworks */,
+				E7DAB7B38BA78A584E0A4460 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +162,7 @@
 		E54EEABD19D3C57400412444 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E51134DC19D7A8C6003DFCD6 /* StatusTableViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -170,6 +174,15 @@
 				E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E7DAB7B38BA78A584E0A4460 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98A49C3A3B27DF15E3710D33 /* Pods.debug.xcconfig */,
+				A7E958F5EAFFCAD517EBB29A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +295,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B5D9B9F27FFB45BA860B5458 /* Check Pods Manifest.lock */ = {
@@ -310,6 +323,7 @@
 				E5E2452F19D5C09D006DA8ED /* TwitterClient.swift in Sources */,
 				E508FBA519D3B9C000A19386 /* LoginViewController.swift in Sources */,
 				E508FBA319D3B9C000A19386 /* AppDelegate.swift in Sources */,
+				E51134DD19D7A8C6003DFCD6 /* StatusTableViewCell.swift in Sources */,
 				E51134D919D7383F003DFCD6 /* User.swift in Sources */,
 				E54EEAC019D45FDD00412444 /* Status.swift in Sources */,
 				E51134DB19D75BF2003DFCD6 /* TimelineViewController.swift in Sources */,
@@ -433,7 +447,7 @@
 		};
 		E508FBBD19D3B9C100A19386 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B41D41CD97142CFAFB65193 /* Pods.xcconfig */;
+			baseConfigurationReference = 98A49C3A3B27DF15E3710D33 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Twitter/Info.plist;
@@ -445,7 +459,7 @@
 		};
 		E508FBBE19D3B9C100A19386 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B41D41CD97142CFAFB65193 /* Pods.xcconfig */;
+			baseConfigurationReference = A7E958F5EAFFCAD517EBB29A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Twitter/Info.plist;
