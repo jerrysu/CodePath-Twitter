@@ -17,9 +17,32 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadStatuses()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.tableView.addPullToRefreshWithActionHandler {
+            TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (statuses, error) -> () in
+                self.loadStatuses()
+            })
+        }
+    }
+
+    func loadStatuses() {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (statuses, error) -> () in
+            if self.tableView.pullToRefreshView != nil {
+                self.tableView.pullToRefreshView.stopAnimating()
+            }
             self.statuses = statuses
             self.tableView.reloadData()
+
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                return ()
+            })
         })
     }
 
@@ -28,7 +51,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.status = self.statuses?[indexPath.row]
         return cell
     }
-
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
