@@ -16,6 +16,7 @@
 		E508FBB919D3B9C000A19386 /* TwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E508FBB819D3B9C000A19386 /* TwitterTests.swift */; };
 		E5104B4B19DB72BE00B6FAA6 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5104B4A19DB72BE00B6FAA6 /* ComposeViewController.swift */; };
 		E5104B4D19DBA22900B6FAA6 /* TwitterEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5104B4C19DBA22900B6FAA6 /* TwitterEvents.swift */; };
+		E5104B4F19DBA89900B6FAA6 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5104B4E19DBA89900B6FAA6 /* StatusViewController.swift */; };
 		E51134D919D7383F003DFCD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51134D819D7383F003DFCD6 /* User.swift */; };
 		E51134DB19D75BF2003DFCD6 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */; };
 		E51134DD19D7A8C6003DFCD6 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51134DC19D7A8C6003DFCD6 /* StatusTableViewCell.swift */; };
@@ -49,6 +50,7 @@
 		E508FBB819D3B9C000A19386 /* TwitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTests.swift; sourceTree = "<group>"; };
 		E5104B4A19DB72BE00B6FAA6 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		E5104B4C19DBA22900B6FAA6 /* TwitterEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterEvents.swift; sourceTree = "<group>"; };
+		E5104B4E19DBA89900B6FAA6 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		E51134D819D7383F003DFCD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		E51134DC19D7A8C6003DFCD6 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,12 +113,12 @@
 				E54EEABE19D3C57C00412444 /* Controllers */,
 				E54EEABD19D3C57400412444 /* UI */,
 				E508FBA219D3B9C000A19386 /* AppDelegate.swift */,
+				E5104B4C19DBA22900B6FAA6 /* TwitterEvents.swift */,
 				E508FBA619D3B9C000A19386 /* Main.storyboard */,
 				E508FBA919D3B9C000A19386 /* Images.xcassets */,
 				E508FBAB19D3B9C000A19386 /* LaunchScreen.xib */,
 				E508FBA019D3B9C000A19386 /* Supporting Files */,
 				E5E2453019D5C382006DA8ED /* Twitter-Bridging-Header.h */,
-				E5104B4C19DBA22900B6FAA6 /* TwitterEvents.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -175,9 +177,10 @@
 		E54EEABE19D3C57C00412444 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E508FBA419D3B9C000A19386 /* LoginViewController.swift */,
-				E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */,
 				E5104B4A19DB72BE00B6FAA6 /* ComposeViewController.swift */,
+				E508FBA419D3B9C000A19386 /* LoginViewController.swift */,
+				E5104B4E19DBA89900B6FAA6 /* StatusViewController.swift */,
+				E51134DA19D75BF2003DFCD6 /* TimelineViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				E508FBA519D3B9C000A19386 /* LoginViewController.swift in Sources */,
 				E508FBA319D3B9C000A19386 /* AppDelegate.swift in Sources */,
 				E5104B4B19DB72BE00B6FAA6 /* ComposeViewController.swift in Sources */,
+				E5104B4F19DBA89900B6FAA6 /* StatusViewController.swift in Sources */,
 				E5104B4D19DBA22900B6FAA6 /* TwitterEvents.swift in Sources */,
 				E51134DD19D7A8C6003DFCD6 /* StatusTableViewCell.swift in Sources */,
 				E51134D919D7383F003DFCD6 /* User.swift in Sources */,

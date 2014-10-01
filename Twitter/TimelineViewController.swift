@@ -58,6 +58,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let controller = storyboard.instantiateViewControllerWithIdentifier("StatusView") as StatusViewController
+        controller.status = self.statuses![indexPath.row]
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
