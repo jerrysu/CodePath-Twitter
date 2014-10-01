@@ -33,6 +33,16 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
         })
     }
 
+    func postStatusUpdateWithParams(params: NSDictionary?, completion: (status: Status?, error: NSError?) -> ()) {
+        self.POST("1.1/statuses/update.json", parameters: params, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            var status = Status(dictionary: response as NSDictionary)
+            completion(status: status, error: nil)
+        }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+            println("error posting status update")
+            completion(status: nil, error: error)
+        }
+    }
+
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()) {
         self.loginCompletion = completion
 

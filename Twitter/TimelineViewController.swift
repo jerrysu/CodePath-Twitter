@@ -17,6 +17,12 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSNotificationCenter.defaultCenter().addObserverForName(TwitterEvents.StatusPosted, object: nil, queue: nil) { (notification: NSNotification!) -> Void in
+            let status = notification.object as Status
+            self.statuses?.insert(status, atIndex: 0)
+            self.tableView.reloadData()
+        }
+
         loadStatuses()
     }
 
